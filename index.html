@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Clone - Azizbek Dev</title>
+    <style>
+        /* Umumiy stillar */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Motiva Sans', Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background-color: #1b2838;
+            color: #c7d5e0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Navigatsiya */
+        
+        header {
+            background-color: #171a21;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: #fff;
+        }
+        /* Asosiy Banner */
+        
+        .hero {
+            width: 80%;
+            margin: 20px auto;
+            height: 400px;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('https://cdn.akamai.steamstatic.com/steam/apps/1245620/capsule_617x353.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        /* O'yinlar Grid */
+        
+        main {
+            width: 80%;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+        }
+        
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
+        }
+        
+        .game-card {
+            background-color: #16202d;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        
+        .game-card:hover {
+            transform: scale(1.03);
+            background-color: #1b2838;
+            box-shadow: 0 0 10px rgba(102, 192, 244, 0.4);
+        }
+        
+        .game-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        
+        .game-info {
+            padding: 10px;
+        }
+        
+        .game-title {
+            font-size: 15px;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .price-tag {
+            background-color: #000;
+            display: inline-block;
+            padding: 4px 8px;
+            font-size: 13px;
+            color: #acdbf5;
+        }
+        /* Sidebar */
+        
+        .sidebar {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 4px;
+        }
+        
+        .sidebar h3 {
+            font-size: 14px;
+            color: #556772;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar li {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #66c0f4;
+            cursor: pointer;
+        }
+        
+        .sidebar li:hover {
+            color: #fff;
+        }
+        
+        footer {
+            background-color: #171a21;
+            padding: 40px 0;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 12px;
+            color: #8f98a0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://store.fastly.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" width="150" alt="Steam">
+            </div>
+            <nav class="nav-links">
+                <a href="#">Do'kon</a>
+                <a href="#">Hamjamiyat</a>
+                <a href="#">Haqida</a>
+                <a href="#">Yordam</a>
+            </nav>
+            <div class="install-btn">
+                <button style="background-color: #5c7e10; color: white; border: none; padding: 8px 15px; cursor: pointer;">Steam O'rnatish</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>ELDEN RING</h1>
+            <p>Yilning eng yaxshi o'yini endi chegirmada!</p>
+            <div class="price-tag" style="margin-top: 15px; font-size: 18px;">$59.99</div>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <h2 style="margin-bottom: 20px; font-weight: normal;">Ommabop o'yinlar</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_617x353.jpg" alt="CS2">
+                    <div class="game-info">
+                        <div class="game-title">Counter-Strike 2</div>
+                        <div class="price-tag">Bepul</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/570/capsule_617x353.jpg" alt="Dota 2">
+                    <div class="game-info">
+                        <div class="game-title">Dota 2</div>
+                        <div class="price-tag">Bepul</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1593500/capsule_617x353.jpg" alt="God of War">
+                    <div class="game-info">
+                        <div class="game-title">God of War Ragnarök</div>
+                        <div class="price-tag">$49.99</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1085660/capsule_617x353.jpg" alt="Destiny 2">
+                    <div class="game-info">
+                        <div class="game-title">Destiny 2</div>
+                        <div class="price-tag">Bepul o'ynash</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/271590/capsule_617x353.jpg" alt="GTA V">
+                    <div class="game-info">
+                        <div class="game-title">Grand Theft Auto V</div>
+                        <div class="price-tag">$29.99</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1174180/capsule_617x353.jpg" alt="RDR2">
+                    <div class="game-info">
+                        <div class="game-title">Red Dead Redemption 2</div>
+                        <div class="price-tag">$59.99</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Janrlar bo'yicha qidiruv</h3>
+            <ul>
+                <li>Action (Jangovar)</li>
+                <li>Sarguzasht</li>
+                <li>Strategiya</li>
+                <li>RPG</li>
+                <li>Indi</li>
+                <li>Poyga</li>
+                <li>Sport</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Valve Corporation. Barcha huquqlar himoyalangan.</p>
+        <p style="margin-top: 10px;">Steam Clone - Junior Frontend Project</p>
+    </footer>
+
+</body>
+
+</html>
